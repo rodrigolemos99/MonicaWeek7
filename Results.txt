@@ -1,0 +1,18 @@
+Images: size -> (112,112), BGR 
+
+	CNN baseline: 35.20% (validation accuracy)
+	AlexNet without pre-training: 35.20% (validation accuracy)
+	AlexNet with pre-training: 35.20% (validation accuracy)
+	VGG16 without pre-training: 35.20% (validation accuracy)
+	VGG16 with pre-training: 32.24% (validation accuracy)
+	Res-Net18 without pre-training: 38.94% (validation accuracy)
+	Res-Net18 with pre-training: 40.19% (validation accuracy) -> best
+	Res-Net50 with pre-training: 35.83% (validation accuracy)
+
+Images: size -> (112,112), RGB
+
+	Res-Net18 with pre-training: 35.20% (validation accuracy)
+
+Images: size -> (150,150), BGR
+
+	Res-Net18 with pre-training:  (validation accuracy)
