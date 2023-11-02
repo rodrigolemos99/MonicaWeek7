@@ -1,4 +1,4 @@
-Images: size -> (112,112), BGR 
+Images: size -> (112,112); BGR; batch_size=32; epochs=10
 
 	CNN baseline: 35.20% (validation accuracy)
 	AlexNet without pre-training: 35.20% (validation accuracy)
@@ -9,10 +9,38 @@ Images: size -> (112,112), BGR
 	Res-Net18 with pre-training: 40.19% (validation accuracy) -> best
 	Res-Net50 with pre-training: 35.83% (validation accuracy)
 
-Images: size -> (112,112), RGB
+
+Images: size -> (112,112); RGB; batch_size=32; epochs=10
 
 	Res-Net18 with pre-training: 35.20% (validation accuracy)
 
-Images: size -> (150,150), BGR
 
-	Res-Net18 with pre-training:  (validation accuracy)
+Images: size -> (150,150); BGR; batch_size=32; epochs=10; optimizer Adam with learning rate=0.001
+
+	Res-Net18 with pre-training: 38.32% (validation accuracy)
+
+
+Images: size -> (112,112); BGR; batch_size=32; epochs=10; freeze all layers except the last one; optimizer Adam with learning rate=0.001
+
+	Res-Net18 with pre-training: 33.33% (validation accuracy)
+
+
+Images: size -> (112,112); BGR; RandomHorizontalFlip (data augmentation); optimizer Adam with learning rate=0.001; batch_size=32; epochs=10
+
+	Res-Net18 with pre-training: 35.36% (validation accuracy)
+
+
+Images: size -> (112,112); BGR; RandomHorizontalFlip e RandomRotation (data augmentation); optimizer Adam with learning rate=0.001; batch_size=32; epochs=10
+
+	Res-Net18 with pre-training: 41.12% (validation accuracy)
+
+
+Images: size -> (112,112); BGR; RandomHorizontalFlip e RandomRotation (data augmentation); optimizer Adam with learning rate=0.01; batch_size=32; epochs=10
+
+	Res-Net18 with pre-training: 35.20% (validation accuracy)
+
+
+Images: size -> (112,112); BGR; RandomHorizontalFlip e RandomRotation (data augmentation); optimizer Adam with learning rate=0.01 and weight_decay=5e-4; batch_size=32; epochs=20
+
+	Res-Net18 with pre-training: 35.51% (validation accuracy)
+
